@@ -1192,7 +1192,7 @@
       "name": "Webhooks",
       "item": [],
       "id": "e268cc48-f30c-41f3-bdb8-4dcf26fc7478",
-      "description": "Webhooks allow Wisely to notify a custom application when events happen.  This might include when order data is collected, a guest arrives to pickup their order, or a leaves feedback.  Wisely simply forwards the data to your endpoint so you can perform any custom logic you'd wish!\n\n## Common Fields\n```\n{\n  \"event_id\": \"140fa2df-7a3a-4190-9c5f-cfa2c6c6feef\",\n  \"event_name\": \"\",\n  \"created_at\": \"\",\n  \"data\": {\n    ...this will include fields specific to the event type (Eg. [Online Ordering Events](#d)\n\n  }\n}\n``` "
+      "description": "Webhooks allow Wisely to notify a custom application when events happen.  This might include when order data is collected, a guest arrives to pickup their order, or a leaves feedback.  Wisely simply forwards the data to your endpoint so you can perform any custom logic you'd wish!\n\n## Common Fields\n```\n{\n  \"event_id\": \"140fa2df-7a3a-4190-9c5f-cfa2c6c6feef\",\n  \"event_name\": \"\",\n  \"created_at\": \"\",\n  \"data\": {\n    ...this will include fields specific to the event type\n  }\n}\n``` \n\nOnline Ordering Webhooks contain data as described in [Online Ordering Events](#12698260-1b0bd614-10ad-4a26-829f-0e2f49a6f22a)"
     },
     {
       "name": "Get Bearer Token",
