@@ -11,7 +11,7 @@
       "item": [
         {
           "name": "Create Order",
-          "id": "84d92873-5f67-4336-9954-c78ac4b035d2",
+          "_postman_id": "84d92873-5f67-4336-9954-c78ac4b035d2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -39,7 +39,7 @@
           "response": []
         }
       ],
-      "id": "c6db6568-97a8-42c5-8023-67481c33fb5b",
+      "_postman_id": "c6db6568-97a8-42c5-8023-67481c33fb5b",
       "description": "## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -47,7 +47,7 @@
       "item": [
         {
           "name": "Get existing reservation",
-          "id": "44b78092-e638-42d1-a60c-e156ad99c4cf",
+          "_postman_id": "44b78092-e638-42d1-a60c-e156ad99c4cf",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -128,7 +128,7 @@
         },
         {
           "name": "Create new reservation",
-          "id": "ee49dc3b-9bb2-4ce4-9713-5bea019d32a1",
+          "_postman_id": "ee49dc3b-9bb2-4ce4-9713-5bea019d32a1",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -147,7 +147,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\",\n    \"availability_type_id\": 1234,\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\",\n    \"notes\": \"We would like a table near the window please!\"\n}"
+              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\",\n    \"availability_type_id\": 1234,\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\",\n    \"notes\": \"We would like a table near the window please!\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": "{{baseUrl}}/guest/reservations",
             "description": "Please view the information under GET /reservations/availability to get the correct `availability_type_id`\n"
@@ -250,7 +253,7 @@
         },
         {
           "name": "Update existing reservation",
-          "id": "37be54bb-266a-4185-978a-88852325fff2",
+          "_postman_id": "37be54bb-266a-4185-978a-88852325fff2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -264,7 +267,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"test@test.com\",\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\"\n}"
+              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"test@test.com\",\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": {
               "raw": "{{baseUrl}}/guest/reservations/:id",
@@ -412,7 +418,7 @@
         },
         {
           "name": "Remove existing reservation",
-          "id": "88013df4-622d-4bbc-98a2-7d431c2834f8",
+          "_postman_id": "88013df4-622d-4bbc-98a2-7d431c2834f8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -481,7 +487,7 @@
         },
         {
           "name": "Reservation Availability",
-          "id": "03ffee01-c44e-45f0-8c26-d569101426f9",
+          "_postman_id": "03ffee01-c44e-45f0-8c26-d569101426f9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -585,7 +591,7 @@
           ]
         }
       ],
-      "id": "3fd0e73f-f9db-42df-a56e-306343ad2604",
+      "_postman_id": "3fd0e73f-f9db-42df-a56e-306343ad2604",
       "description": "## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -593,7 +599,7 @@
       "item": [
         {
           "name": "Get current waittime",
-          "id": "50e194a6-b407-45a2-a467-54f96c960f05",
+          "_postman_id": "50e194a6-b407-45a2-a467-54f96c960f05",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -680,7 +686,7 @@
         },
         {
           "name": "Get waitlist status",
-          "id": "87f8fd57-6c79-49a8-b6c3-b36ca9706855",
+          "_postman_id": "87f8fd57-6c79-49a8-b6c3-b36ca9706855",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -757,7 +763,7 @@
         },
         {
           "name": "Get existing waitlist party",
-          "id": "932c03a1-f6ff-40e0-9fdd-87cc0b0a0681",
+          "_postman_id": "932c03a1-f6ff-40e0-9fdd-87cc0b0a0681",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -838,7 +844,7 @@
         },
         {
           "name": "Create a waitlist party",
-          "id": "838e741a-5b6f-44c9-9305-b52bfa8dd676",
+          "_postman_id": "838e741a-5b6f-44c9-9305-b52bfa8dd676",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -857,7 +863,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\"\n}"
+              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": "{{baseUrl}}/guest/waitlist",
             "description": "Use this to add guest to the waitlist"
@@ -898,7 +907,7 @@
         },
         {
           "name": "Update existing waitlist party",
-          "id": "42106d82-aa65-42bb-b6d6-91c368475c0d",
+          "_postman_id": "42106d82-aa65-42bb-b6d6-91c368475c0d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -917,7 +926,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\"\n}"
+              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": {
               "raw": "{{baseUrl}}/guest/waitlist/:id",
@@ -991,7 +1003,7 @@
         },
         {
           "name": "Remove existing waitlist party",
-          "id": "26519672-e4e8-4cf9-ac21-1cb44aaf81ea",
+          "_postman_id": "26519672-e4e8-4cf9-ac21-1cb44aaf81ea",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1071,7 +1083,7 @@
           ]
         }
       ],
-      "id": "fe68dca3-345c-45db-9c14-ed20c93400cd",
+      "_postman_id": "fe68dca3-345c-45db-9c14-ed20c93400cd",
       "description": "## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -1079,7 +1091,7 @@
       "item": [
         {
           "name": "Get Guest Profile",
-          "id": "f089872b-f569-476e-acf8-1d4562d7dff5",
+          "_postman_id": "f089872b-f569-476e-acf8-1d4562d7dff5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1091,7 +1103,7 @@
           "response": []
         }
       ],
-      "id": "8ec9110c-c5fd-4649-a4cf-844a57ea7e69",
+      "_postman_id": "8ec9110c-c5fd-4649-a4cf-844a57ea7e69",
       "description": "The Guest Profile API can be used to query custom attributes, segment memberships, recently tracked events, and other data available on a Wisely Guest Profile. \n\nThe Guest Profiles API can be used to drive one-to-one personalized experiences for your guests across any channel:\n\n## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -1099,7 +1111,7 @@
       "item": [
         {
           "name": "Update Guest Identity",
-          "id": "2368b262-11fc-403e-86af-036bc563abc4",
+          "_postman_id": "2368b262-11fc-403e-86af-036bc563abc4",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1128,7 +1140,7 @@
         },
         {
           "name": "Track Guest Events",
-          "id": "e103b561-e307-46ba-8f3f-3e6c21962104",
+          "_postman_id": "e103b561-e307-46ba-8f3f-3e6c21962104",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1157,7 +1169,7 @@
         },
         {
           "name": "Batch Events",
-          "id": "bc38b89d-d0b1-48f4-9f77-e19dce4ed889",
+          "_postman_id": "bc38b89d-d0b1-48f4-9f77-e19dce4ed889",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1185,17 +1197,17 @@
           "response": []
         }
       ],
-      "id": "1b0bd614-10ad-4a26-829f-0e2f49a6f22a",
-      "description": "Each data source will have a unique **Source Token** that identifies you as a customer as well as the specific source of data.  For example, a loyalty provider, POS data, and raw HTTP requests will each have their own token.  \n\nThis allows us to forward data to specific destinations and intelligently control how identities are merged.  Keeping the tokens separate also allows forwarding historical data from a specific source if you choose to switch destination vendors in the future (eg. switching to a different marketing provider)\n\n## Authorization\n\nThe Data Streams API uses basic authentication.  Omitting the token will result in a 401 Unauthorized Response. \n\nHTTP Basic Authentication involves `username:password`, base64 encoded, and prepended with `Basic`.  \n\nIn practice for this API, you will take a **Source Token**, append a colon, and leave the password empty.  For example, if your token is `abcde12345`, you will base64 encode it to become `YWJjZGUxMjM0NQ==`.  You will then pass this as the authorization header like so: 'Authorization: Basic YWJjMTIzOg=='.\n\n## Webhooks and Third Party Destinations\n\nAll event and identity data captured by the Data Streams API can be forwarded to a destination of your choosing via a POST request to a configurable URL.  This data will be sent formatted exactly how the original request was made.  \n \nWisely also supports direct integrations to various data destinations like loyalty and marketing providers.  This will empower your brand to utilize combined guest data in any platform of your choosing without vendor lock in. Please discuss the integration options with your Wisely CSM.\n\n"
+      "_postman_id": "1b0bd614-10ad-4a26-829f-0e2f49a6f22a",
+      "description": "Each data source will have a unique **Source Token** that identifies you as a customer as well as the specific source of data.  For example, a loyalty provider, POS data, and raw HTTP requests will each have their own token.  \n\nThis allows us to forward data to specific destinations and intelligently control how identities are merged.  Keeping the tokens separate also allows forwarding historical data from a specific source if you choose to switch destination vendors in the future (eg. switching to a different marketing provider)\n\n## Authorization\n\nThe Data Streams API uses basic authentication.  Omitting the token will result in a 401 Unauthorized Response. \n\nHTTP Basic Authentication involves `username:password`, base64 encoded, and prepended with `Basic`.  \n\nIn practice for this API, you will take a **Source Token**, append a colon, and leave the password empty.  For example, if your token is `abcde12345`, you will base64 encode it to become `YWJjZGUxMjM0NQ==`.  You will then pass this as the authorization header like so: 'Authorization: Basic YWJjMTIzOg=='.\n\n## Webhooks and Third Party Destinations\n\nAll event and identity data captured by the Data Streams API can be forwarded to a destination of your choosing via a POST request to a configurable URL.  This data will be sent formatted exactly how the original request was made.  \n \nWisely also supports direct integrations to various data destinations like loyalty and marketing providers.  This will empower your brand to utilize combined guest data in any platform of your choosing without vendor lock in. Please discuss the integration options with your Wisely CSM.  See [Webhooks](#12698260-e268cc48-f30c-41f3-bdb8-4dcf26fc7478) for more details.\n\n"
     },
     {
       "name": "Webhooks",
       "item": [],
-      "id": "e268cc48-f30c-41f3-bdb8-4dcf26fc7478"
+      "_postman_id": "e268cc48-f30c-41f3-bdb8-4dcf26fc7478"
     },
     {
       "name": "Get Bearer Token",
-      "id": "b39c8f31-e907-4b58-a1d2-49eeaf43b9e2",
+      "_postman_id": "b39c8f31-e907-4b58-a1d2-49eeaf43b9e2",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -1229,7 +1241,10 @@
               "value": "****",
               "type": "text"
             }
-          ]
+          ],
+          "options": {
+            "urlencoded": {}
+          }
         },
         "url": "{{baseAuthUrl}}/oauth2/default/v1/token",
         "description": "Using your Wisely provided client ID and client secret, you may fetch a refreshed access token.  Your credentials carry access to your customer data, so be sure to keep them secret! \n**Do not share your client_id or client_secret in publicly accessible areas such as GitHub or client-side code.**\n        \nThe access token is a JWT containing the keys `token_type`, `expires_in`, `access_token`, and `scope`.\n        \nYou will use the `access_token` key prefixed with \"Bearer \" in the `Authorization` header for all requsts. `Authorization: Bearer eyJraWQiOiIx...`\n        \n**Please note `expires_in` indicates that the token is valid for 3600 seconds (1 hour).  Please cache your tokens for this duration before refreshing or you may experience a rate limit."
@@ -1265,7 +1280,10 @@
                   "value": "****",
                   "type": "text"
                 }
-              ]
+              ],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": "{{baseAuthUrl}}/oauth2/default/v1/token"
           },
