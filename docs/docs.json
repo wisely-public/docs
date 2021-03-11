@@ -10,6 +10,111 @@
       "name": "Reservations",
       "item": [
         {
+          "name": "Reservation Availability",
+          "_postman_id": "03ffee01-c44e-45f0-8c26-d569101426f9",
+          "protocolProfileBehavior": {
+            "disableBodyPruning": true
+          },
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "description": "(Required) Bearer Token",
+                "key": "Authorization",
+                "value": "Bearer eyJraW...."
+              }
+            ],
+            "url": {
+              "raw": "{{baseUrl}}/reservations/availability?merchant_id=49552296.58619383&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "reservations",
+                "availability"
+              ],
+              "query": [
+                {
+                  "key": "merchant_id",
+                  "value": "49552296.58619383",
+                  "description": "(Required) "
+                },
+                {
+                  "key": "party_size",
+                  "value": "5",
+                  "description": "(Required) Number of people in the reservation"
+                },
+                {
+                  "key": "search_ts",
+                  "value": "2020-05-11T18:15:00-04:00",
+                  "description": "(Required) Timestamp to center the availability search"
+                },
+                {
+                  "key": "search_window_minutes",
+                  "value": "180"
+                }
+              ]
+            },
+            "description": "Reservation availability is broken down into `availability_types`.  You will have one default type and for more interesting use cases, you may add additional options by contacting your Wisely CSM.  By default, the API will return an array containing a single availability_type denoted with `is_default=true`.  Please see the example response provided below.\n\nWithin the availability type object, you will see a `slots` array containing objects (`timestamp`, `is_available`).  Each object represents a time slot that will accept additional bookings for the provided `party_size`  \n\n`search_ts` represents the guest's desired reservation time.  For this reason we sort the available time slots in descending order by proximity to this timestamp.  We recommend displaying multiple time slots to your guests when they search to increase the likelihood they will find an available time slot on a busy night, thereby increasing conversion.\n\nDepending on how your user interface behaves, you may want to search for availability over the entire day or constrained to a smaller window.  By default, the API will return available slots for the entire day.  To constrain the search, use the parameter `search_window_minutes`.  For example, passing `search_window_minutes=180` would constrain the search results to 3 hours on either side of your provided `search_ts`.\n"
+          },
+          "response": [
+            {
+              "id": "c93361ba-9d92-4b3a-abf8-1b638f8630b5",
+              "name": "OK",
+              "originalRequest": {
+                "method": "GET",
+                "header": [
+                  {
+                    "description": "(Required) Bearer Token",
+                    "key": "Authorization",
+                    "value": "Bearer eyJraW...."
+                  }
+                ],
+                "url": {
+                  "raw": "{{baseUrl}}/reservations/availability?merchant_id=49552296.58619383&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
+                  "host": [
+                    "{{baseUrl}}"
+                  ],
+                  "path": [
+                    "reservations",
+                    "availability"
+                  ],
+                  "query": [
+                    {
+                      "key": "merchant_id",
+                      "value": "49552296.58619383"
+                    },
+                    {
+                      "key": "party_size",
+                      "value": "5"
+                    },
+                    {
+                      "key": "search_ts",
+                      "value": "2020-05-11T18:15:00-04:00"
+                    },
+                    {
+                      "key": "search_window_minutes",
+                      "value": "180"
+                    }
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                }
+              ],
+              "cookie": [],
+              "responseTime": null,
+              "body": "{\n \"availability_types\": [\n  {\n   \"id\": 1234,\n   \"name\": \"Dinner Reservation\",\n   \"description\": \"This is customizable text\",\n   \"is_default\": true,\n   \"slots\": [\n    {\n     \"timestamp\": \"2020-05-11T18:00:00-04:00\",\n     \"is_available\": false\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:15:00-04:00\",\n     \"is_available\": true\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:30:00-04:00\",\n     \"is_available\": false\n    }\n   ]\n  },\n  {\n   \"id\": 4321,\n   \"name\": \"Mother's Day Brunch ($40 per person)\",\n   \"description\": \"Enjoy a Special 3 Course Meal (Appetizer, Entree, Dessert) to celebrate mother's day!\",\n   \"prepaid_fee\": 40,\n   \"is_flat_fee\": false,\n   \"is_default\": false,\n   \"slots\": [\n    {\n     \"timestamp\": \"2020-05-11T18:00:00-04:00\",\n     \"is_available\": true\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:15:00-04:00\",\n     \"is_available\": true\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:30:00-04:00\",\n     \"is_available\": true\n    }\n   ]\n  }\n ]\n}"
+            }
+          ]
+        },
+        {
           "name": "Get existing reservation",
           "_postman_id": "44b78092-e638-42d1-a60c-e156ad99c4cf",
           "protocolProfileBehavior": {
@@ -446,111 +551,6 @@
               "cookie": [],
               "responseTime": null,
               "body": "{\n \"party\": {\n  \"id\": \"523f43xdsa\",\n  \"name\": \"John Snow\",\n  \"party_size\": 2,\n  \"phone\": \"+15551234567\",\n  \"email\": \"email@test.com\",\n  \"status\": \"BOOKED\",\n  \"notes\": \"We would like to request a booth near the window please!\",\n  \"reserved_at\": \"2020-05-11T18:15:00-04:00\",\n  \"created_at\": \"2020-05-03T13:12:23-04:00\",\n  \"updated_at\": \"2020-05-03T13:12:23-04:00\",\n  \"deleted_at\": \"proident\",\n  \"booking_url\": \"https://...\",\n  \"modify_url\": \"https://...\",\n  \"cancellation_url\": \"https://...\"\n }\n}"
-            }
-          ]
-        },
-        {
-          "name": "Reservation Availability",
-          "_postman_id": "03ffee01-c44e-45f0-8c26-d569101426f9",
-          "protocolProfileBehavior": {
-            "disableBodyPruning": true
-          },
-          "request": {
-            "method": "GET",
-            "header": [
-              {
-                "description": "(Required) Bearer Token",
-                "key": "Authorization",
-                "value": "Bearer eyJraW...."
-              }
-            ],
-            "url": {
-              "raw": "{{baseUrl}}/reservations/availability?merchant_id=49552296.58619383&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
-              "host": [
-                "{{baseUrl}}"
-              ],
-              "path": [
-                "reservations",
-                "availability"
-              ],
-              "query": [
-                {
-                  "key": "merchant_id",
-                  "value": "49552296.58619383",
-                  "description": "(Required) "
-                },
-                {
-                  "key": "party_size",
-                  "value": "5",
-                  "description": "(Required) Number of people in the reservation"
-                },
-                {
-                  "key": "search_ts",
-                  "value": "2020-05-11T18:15:00-04:00",
-                  "description": "(Required) Timestamp to center the availability search"
-                },
-                {
-                  "key": "search_window_minutes",
-                  "value": "180"
-                }
-              ]
-            },
-            "description": "Reservation availability is broken down into `availability_types`.  You will have one default type and for more interesting use cases, you may add additional options by contacting your Wisely CSM.  By default, the API will return an array containing a single availability_type denoted with `is_default=true`.  Please see the example response provided below.\n\nWithin the availability type object, you will see a `slots` array containing objects (`timestamp`, `is_available`).  Each object represents a time slot that will accept additional bookings for the provided `party_size`  \n\n`search_ts` represents the guest's desired reservation time.  For this reason we sort the available time slots in descending order by proximity to this timestamp.  We recommend displaying multiple time slots to your guests when they search to increase the likelihood they will find an available time slot on a busy night, thereby increasing conversion.\n\nDepending on how your user interface behaves, you may want to search for availability over the entire day or constrained to a smaller window.  By default, the API will return available slots for the entire day.  To constrain the search, use the parameter `search_window_minutes`.  For example, passing `search_window_minutes=180` would constrain the search results to 3 hours on either side of your provided `search_ts`.\n"
-          },
-          "response": [
-            {
-              "id": "c93361ba-9d92-4b3a-abf8-1b638f8630b5",
-              "name": "OK",
-              "originalRequest": {
-                "method": "GET",
-                "header": [
-                  {
-                    "description": "(Required) Bearer Token",
-                    "key": "Authorization",
-                    "value": "Bearer eyJraW...."
-                  }
-                ],
-                "url": {
-                  "raw": "{{baseUrl}}/reservations/availability?merchant_id=49552296.58619383&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
-                  "host": [
-                    "{{baseUrl}}"
-                  ],
-                  "path": [
-                    "reservations",
-                    "availability"
-                  ],
-                  "query": [
-                    {
-                      "key": "merchant_id",
-                      "value": "49552296.58619383"
-                    },
-                    {
-                      "key": "party_size",
-                      "value": "5"
-                    },
-                    {
-                      "key": "search_ts",
-                      "value": "2020-05-11T18:15:00-04:00"
-                    },
-                    {
-                      "key": "search_window_minutes",
-                      "value": "180"
-                    }
-                  ]
-                }
-              },
-              "status": "OK",
-              "code": 200,
-              "_postman_previewlanguage": "json",
-              "header": [
-                {
-                  "key": "Content-Type",
-                  "value": "application/json"
-                }
-              ],
-              "cookie": [],
-              "responseTime": null,
-              "body": "{\n \"availability_types\": [\n  {\n   \"id\": 1234,\n   \"name\": \"Dinner Reservation\",\n   \"description\": \"This is customizable text\",\n   \"is_default\": true,\n   \"slots\": [\n    {\n     \"timestamp\": \"2020-05-11T18:00:00-04:00\",\n     \"is_available\": false\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:15:00-04:00\",\n     \"is_available\": true\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:30:00-04:00\",\n     \"is_available\": false\n    }\n   ]\n  },\n  {\n   \"id\": 4321,\n   \"name\": \"Mother's Day Brunch ($40 per person)\",\n   \"description\": \"Enjoy a Special 3 Course Meal (Appetizer, Entree, Dessert) to celebrate mother's day!\",\n   \"prepaid_fee\": 40,\n   \"is_flat_fee\": false,\n   \"is_default\": false,\n   \"slots\": [\n    {\n     \"timestamp\": \"2020-05-11T18:00:00-04:00\",\n     \"is_available\": true\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:15:00-04:00\",\n     \"is_available\": true\n    },\n    {\n     \"timestamp\": \"2020-05-11T18:30:00-04:00\",\n     \"is_available\": true\n    }\n   ]\n  }\n ]\n}"
             }
           ]
         }
