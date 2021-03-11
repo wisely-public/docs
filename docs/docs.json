@@ -498,9 +498,8 @@
               ],
               "variable": [
                 {
-                  "id": "e9c6d367-2c0b-4f87-9d39-6080124e6e55",
                   "key": "id",
-                  "value": "quis",
+                  "value": "12345",
                   "type": "string",
                   "description": "(Required) "
                 }
@@ -656,7 +655,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/waitlist/status?merchant_id=",
+              "raw": "{{baseUrl}}/waitlist/status?merchant_id=12345",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -667,7 +666,7 @@
               "query": [
                 {
                   "key": "merchant_id",
-                  "value": ""
+                  "value": "12345"
                 }
               ]
             }
@@ -744,9 +743,8 @@
               ],
               "variable": [
                 {
-                  "id": "b06eefb4-da84-4a54-ac2d-0f5c6827bc96",
                   "key": "id",
-                  "value": "quis",
+                  "value": "12345",
                   "type": "string",
                   "description": "(Required) identifier returned by POST /guest/waitlist"
                 }
@@ -893,9 +891,8 @@
               ],
               "variable": [
                 {
-                  "id": "8dd07dfc-ab2f-4f1c-a398-69b88607cc7a",
                   "key": "id",
-                  "value": "quis",
+                  "value": "12345",
                   "type": "string",
                   "description": "(Required) identifier returned by POST /guest/waitlist"
                 }
@@ -978,9 +975,8 @@
               ],
               "variable": [
                 {
-                  "id": "aa19e7f1-61e8-47aa-9ce1-7eb41eb07676",
                   "key": "id",
-                  "value": "quis",
+                  "value": "12345",
                   "type": "string",
                   "description": "(Required) identifier returned by POST /guest/waitlist"
                 }
