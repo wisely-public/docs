@@ -25,7 +25,7 @@
               }
             ],
             "url": {
-              "raw": "{{baseUrl}}/reservations/availability?merchant_id=49552296.58619383&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
+              "raw": "{{baseUrl}}/reservations/availability?merchant_id=12345&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
               "host": [
                 "{{baseUrl}}"
               ],
@@ -36,7 +36,7 @@
               "query": [
                 {
                   "key": "merchant_id",
-                  "value": "49552296.58619383",
+                  "value": "12345",
                   "description": "(Required) "
                 },
                 {
@@ -1048,7 +1048,7 @@
         }
       ],
       "_postman_id": "fe68dca3-345c-45db-9c14-ed20c93400cd",
-      "description": "## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
+      "description": "Wisely provides a drop-in HTML snippet to display the Waitlist flow on your website. If you would like to create a more custom experience, our API allows you to perform all of the same actions.\n\nUsing this API you will be able to query the current wait time, whether the waitlist has been closed, and create, update, and delete parties.  You can also pass any custom fields that are unique to your custom experience.\n\n## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
       "name": "Orders",
