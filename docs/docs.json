@@ -11,7 +11,7 @@
       "item": [
         {
           "name": "Reservation Availability",
-          "id": "03ffee01-c44e-45f0-8c26-d569101426f9",
+          "_postman_id": "03ffee01-c44e-45f0-8c26-d569101426f9",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -71,7 +71,7 @@
                   }
                 ],
                 "url": {
-                  "raw": "{{baseUrl}}/reservations/availability?merchant_id=49552296.58619383&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
+                  "raw": "{{baseUrl}}/reservations/availability?merchant_id=12345&party_size=5&search_ts=2020-05-11T18:15:00-04:00&search_window_minutes=180",
                   "host": [
                     "{{baseUrl}}"
                   ],
@@ -82,7 +82,7 @@
                   "query": [
                     {
                       "key": "merchant_id",
-                      "value": "49552296.58619383"
+                      "value": "12345"
                     },
                     {
                       "key": "party_size",
@@ -116,7 +116,7 @@
         },
         {
           "name": "Get existing reservation",
-          "id": "44b78092-e638-42d1-a60c-e156ad99c4cf",
+          "_postman_id": "44b78092-e638-42d1-a60c-e156ad99c4cf",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -196,7 +196,7 @@
         },
         {
           "name": "Create new reservation",
-          "id": "ee49dc3b-9bb2-4ce4-9713-5bea019d32a1",
+          "_postman_id": "ee49dc3b-9bb2-4ce4-9713-5bea019d32a1",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -215,7 +215,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\",\n    \"availability_type_id\": 1234,\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\",\n    \"notes\": \"We would like a table near the window please!\"\n}"
+              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\",\n    \"availability_type_id\": 1234,\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\",\n    \"notes\": \"We would like a table near the window please!\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": "{{baseUrl}}/guest/reservations",
             "description": "Please view the information under GET /reservations/availability to get the correct `availability_type_id`\n"
@@ -318,7 +321,7 @@
         },
         {
           "name": "Update existing reservation",
-          "id": "37be54bb-266a-4185-978a-88852325fff2",
+          "_postman_id": "37be54bb-266a-4185-978a-88852325fff2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -332,7 +335,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"test@test.com\",\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\"\n}"
+              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"test@test.com\",\n    \"reserved_at\": \"2020-05-11T18:15:00-04:00\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": {
               "raw": "{{baseUrl}}/guest/reservations/:id",
@@ -479,7 +485,7 @@
         },
         {
           "name": "Remove existing reservation",
-          "id": "88013df4-622d-4bbc-98a2-7d431c2834f8",
+          "_postman_id": "88013df4-622d-4bbc-98a2-7d431c2834f8",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -546,7 +552,7 @@
           ]
         }
       ],
-      "id": "3fd0e73f-f9db-42df-a56e-306343ad2604",
+      "_postman_id": "3fd0e73f-f9db-42df-a56e-306343ad2604",
       "description": "Wisely provides a drop-in HTML snippet to display the Reservations flow on your website.  If you would like to create a more custom experience, our API allows you to perform all of the same actions.\n\nUsing this API you will be able to query reservation availability and create, update and delete reservations.  Along with reservations you can attach any custom fields that are unique to your custom experience.\n\n## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -554,7 +560,7 @@
       "item": [
         {
           "name": "Get current waittime",
-          "id": "50e194a6-b407-45a2-a467-54f96c960f05",
+          "_postman_id": "50e194a6-b407-45a2-a467-54f96c960f05",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -641,7 +647,7 @@
         },
         {
           "name": "Get waitlist status",
-          "id": "87f8fd57-6c79-49a8-b6c3-b36ca9706855",
+          "_postman_id": "87f8fd57-6c79-49a8-b6c3-b36ca9706855",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -718,7 +724,7 @@
         },
         {
           "name": "Get existing waitlist party",
-          "id": "932c03a1-f6ff-40e0-9fdd-87cc0b0a0681",
+          "_postman_id": "932c03a1-f6ff-40e0-9fdd-87cc0b0a0681",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -798,7 +804,7 @@
         },
         {
           "name": "Create a waitlist party",
-          "id": "838e741a-5b6f-44c9-9305-b52bfa8dd676",
+          "_postman_id": "838e741a-5b6f-44c9-9305-b52bfa8dd676",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -817,7 +823,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\"\n}"
+              "raw": "{\n    \"merchant_id\": 1,\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\",\n    \"email\": \"hello@test.com\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": "{{baseUrl}}/guest/waitlist",
             "description": "Use this to add guest to the waitlist"
@@ -858,7 +867,7 @@
         },
         {
           "name": "Update existing waitlist party",
-          "id": "42106d82-aa65-42bb-b6d6-91c368475c0d",
+          "_postman_id": "42106d82-aa65-42bb-b6d6-91c368475c0d",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -877,7 +886,10 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\"\n}"
+              "raw": "{\n    \"name\": \"Jessica Smith\",\n    \"party_size\": 2,\n    \"phone\": \"+12025550109\"\n}",
+              "options": {
+                "raw": {}
+              }
             },
             "url": {
               "raw": "{{baseUrl}}/guest/waitlist/:id",
@@ -950,7 +962,7 @@
         },
         {
           "name": "Remove existing waitlist party",
-          "id": "26519672-e4e8-4cf9-ac21-1cb44aaf81ea",
+          "_postman_id": "26519672-e4e8-4cf9-ac21-1cb44aaf81ea",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1029,7 +1041,7 @@
           ]
         }
       ],
-      "id": "fe68dca3-345c-45db-9c14-ed20c93400cd",
+      "_postman_id": "fe68dca3-345c-45db-9c14-ed20c93400cd",
       "description": "Wisely provides a drop-in HTML snippet to display the Waitlist flow on your website. If you would like to create a more custom experience, our API allows you to perform all of the same actions.\n\nUsing this API you will be able to query the current wait time, whether the waitlist has been closed, and create, update, and delete parties.  You can also pass any custom fields that are unique to your custom experience.\n\n## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -1037,7 +1049,7 @@
       "item": [
         {
           "name": "Create Order",
-          "id": "84d92873-5f67-4336-9954-c78ac4b035d2",
+          "_postman_id": "84d92873-5f67-4336-9954-c78ac4b035d2",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1052,20 +1064,20 @@
             ],
             "body": {
               "mode": "raw",
-              "raw": "{\n    \"order\": {\n        \"source_id\": \"amklfsklm234km23lkdml32\",\n        \"location_source_id\": \"12345\",\n        \"source_type\": \"toast\",\n        \"delivery_method\": null,\n        \"delivery_address\": {\n            \"street_address_1\": \"1111 Sunshine Ave\",\n            \"street_address_2\": null,\n            \"city\": \"Washington\",\n            \"zip_code\": \"45458\",\n            \"comments\": \"Leave it next to the door\",\n            \"coordinates\": {\n                \"latitude\": 32.1012031203,\n                \"longitude\": -84.2005844116211\n            }\n        },\n        \"opened_at\": \"2020-10-27T22:31:30.996+0000\",\n        \"ready_at\": \"2020-10-27T23:59:30.996+0000\",\n        \"cancelled_at\": null,\n        \"closed_at\": null,\n        \"pickedup_at\": \"2020-10-27T22:31:30.996+0000\",\n        \"name\": \"Johnny\",\n        \"provider_id\": \"in-store\",\n        \"tickets\": [\n            {\n                \"source_id\": \"93182939\",\n                \"customer\": {\n                    \"fname\": \"Johnny\",\n                    \"email\": \"johnny@example.com\",\n                    \"phone\": \"5555559999\"\n                },\n                \"open\": true,\n                \"guest_count\": 10,\n                \"opened_at\": \"2020-10-27T22:31:30.996+0000\",\n                \"closed_at\": \"2020-10-27T22:31:30.996+0000\",\n                \"name\": null,\n                \"table_id\": null,\n                \"voided\": false,\n                \"ticket_number\": \"\",\n                \"revenue_center_id\": null,\n                \"employee_id\": null,\n                \"sub_total\": 3425,\n                \"total\": 3625,\n                \"due\": 0,\n                \"tax\": 200,\n                \"tip\": 500,\n                \"paid\": 3925,\n                \"payments\": [\n                    {\n                        \"source_id\": \"32\",\n                        \"amount\": 3425,\n                        \"tip\": 500,\n                        \"last4\": \"1029\",\n                        \"comments\": null,\n                        \"payment_type\": \"credit_card\",\n                        \"card_type\": \"Visa\",\n                        \"card_token\": \"123456\"\n                    },\n                    {\n                        \"source_id\": \"33\",\n                        \"amount\": 3425,\n                        \"tip\": 200,\n                        \"last4\": null,\n                        \"comments\": \"cash was ripped\",\n                        \"payment_type\": \"cash\",\n                        \"card_type\": null,\n                        \"card_token\": null\n                    }\n                ],\n                \"items\": [\n                    {\n                        \"source_id\": \"123\",\n                        \"name\": \"Green Goddess Salad\",\n                        \"comment\": null,\n                        \"price\": 1400,\n                        \"quantity\": 2,\n                        \"voided\": false,\n                        \"modifiers\": [],\n                        \"menu_item_id\": \"99\"\n                    },\n                    {\n                        \"source_id\": \"456\",\n                        \"name\": \"Hamburger\",\n                        \"comment\": \"Extra crispy!\",\n                        \"price\": 1925,\n                        \"quantity\": 1,\n                        \"voided\": false,\n                        \"modifiers\": [\n                            {\n                                \"name\": \"Extra onions\",\n                                \"source_id\": \"13123\",\n                                \"comment\": null,\n                                \"quantity\": 1,\n                                \"price\": 125,\n                                \"modifiers\": [\n                                    {\n                                        \"name\": \"Extra Extra onions\",\n                                        \"source_id\": \"13124\",\n                                        \"comment\": null,\n                                        \"quantity\": 1,\n                                        \"price\": 125,\n                                        \"modifiers\": [],\n                                        \"menu_modifier_id\": \"102934\"\n                                    }\n                                ],\n                                \"menu_modifier_id\": \"10293\"\n                            }\n                        ],\n                        \"menu_item_id\": \"131\"\n                    }\n                ]\n            }\n        ]\n    }\n}",
+              "raw": "{\n    \"order\": {\n    \"source_id\": \"3720167294981\",\n    \"location_source_id\": \"oohIvzE4mUSgu5Iwpd1kNA==\",\n    \"source_type\": \"toast\",\n    \"delivery_method\": \"Delivery\",\n    \"opened_at\": \"2021-03-01T13:41:01Z\",\n    \"closed_at\": \"2021-03-01T13:41:56Z\",\n    \"provider_id\": \"toast\",\n    \"tickets\": [\n        {\n            \"source_id\": \"3720167294981\",\n            \"customer\": {\n                \"fname\": \"khmb8\",\n                \"lname\": \"khmb8\",\n                \"email\": \"khmb8@ks.com\",\n                               \"email\": \"khmb8@ks.com\",\n                \"email_marketing_opt_in\": true,\n                \"sms_marketing_opt_in\": true\n            },\n            \"open\": false,\n            \"guest_count\": 1,\n            \"opened_at\": \"2021-03-01T13:41:01Z\",\n            \"closed_at\": \"2021-03-01T13:41:56Z\",\n            \"voided\": false,\n            \"ticket_number\": 65537,\n            \"employee_id\": \"640325925\",\n            \"sub_total\": 11,\n            \"total\": 12,\n            \"due\": 0,\n            \"tax\": 0,\n            \"tip\": 0,\n            \"paid\": 13,\n            \"payments\": [\n                {\n                    \"source_id\": \"7\",\n                    \"amount\": 13,\n                    \"tip\": 0,\n                    \"payment_type\": \"cash\",\n                    \"card_type\": \"Unspecified\"\n                }\n            ],\n            \"items\": [\n                {\n                    \"source_id\": \"1\",\n                    \"name\": \"Combo 1\",\n                    \"price\": 6,\n                    \"quantity\": 1,\n                    \"voided\": false,\n                    \"modifiers\": [],\n                    \"menu_item_id\": \"640250848\"\n                },\n                {\n                    \"source_id\": \"2\",\n                    \"name\": \"Hamburger\",\n                    \"price\": 0,\n                    \"quantity\": 1,\n                    \"voided\": false,\n                    \"modifiers\": [],\n                    \"menu_item_id\": \"640250256\"\n                },\n                {\n                    \"source_id\": \"3\",\n                    \"name\": \"Fries - Small\",\n                    \"price\": 0,\n                    \"quantity\": 1,\n                    \"voided\": false,\n                    \"modifiers\": [],\n                    \"menu_item_id\": \"640250788\"\n                },\n                {\n                    \"source_id\": \"4\",\n                    \"name\": \"Soda - Small\",\n                    \"price\": 0,\n                    \"quantity\": 1,\n                    \"voided\": false,\n                    \"modifiers\": [],\n                    \"menu_item_id\": \"4018173\"\n                },\n                {\n                    \"source_id\": \"5\",\n                    \"name\": \"Cheese Fries - Medium\",\n                    \"price\": 2,\n                    \"quantity\": 1,\n                    \"voided\": false,\n                    \"modifiers\": [],\n                    \"menu_item_id\": \"640251018\"\n                },\n                {\n                    \"source_id\": \"6\",\n                    \"name\": \"Lemonade - Small\",\n                    \"price\": 2,\n                    \"quantity\": 1,\n                    \"voided\": false,\n                    \"modifiers\": [],\n                    \"menu_item_id\": \"4018175\"\n                }\n            ]\n        }\n    ]\n}\n}",
               "options": {
                 "raw": {
                   "language": "json"
                 }
               }
             },
-            "url": "{{baseUrl}}/orders",
+            "url": "http://localhost:8877/pos/orders",
             "description": "## Description\n\nUse this request to save order, ticket, and guest data to Wisely.\n  \nConceptually, an order contains an array of tickets. Each ticket must have a customer object, which represents who ordered the items on the check\n\n**Rate Limit:** \nSoft limit of 30 requests per second per store.\n\n<br />\n\n## Request body\n---\n\n## `order` (required | object)\n---\n| key                                    \t| type     \t| description                                                                                                                                                                                                                                            \t|\n|----------------------------------------\t|----------\t|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------\t|\n| `order.source_id` (required)           \t| string   \t| The source ID of the order, per the POS / ordering provider. Must be completely unique across all systems                                                                                                                                              \t|\n| `order.location_source_id` (required)  \t| string   \t| The source ID of the location that's fulfilling the order. Must exist in Wisely prior to saving data                                                                                                                                                   \t|\n| `order.source_type` (required)         \t| string   \t| The provider of the order data. Currently, only accepted values are \"toast\" or \"olo\"                                                                                                                                                                   \t|\n| `order.delivery_method`                \t| string   \t| The manner in which the order was delivered. Ex. curbside, delivery, dispatch, pickup                                                                                                                                                                  \t|\n| `order.delivery_address`               \t| object   \t| Information about where the order is being delivered. Fields include service_address_1, service_address_2, city, zip_code, comments, a coordinates object. coordinates contains a latitude property and a longitude property, both in decimal formats. \t|\n| `order.opened_at` (required)           \t| datetime \t| Date time of when the order was opened. Submitted in UTC                                                                                                                                                                                               \t|\n| `order.ready_at`                       \t| datetime \t| Date time of when the order is ready to be picked up by a guest. Submitted in UTC                                                                                                                                                                      \t|\n| `order.cancelled_at`                   \t| datetime \t| If the order was cancelled, this field represents when the order was cancelled. Submitted in UTC                                                                                                                                                       \t|\n| `order.closed_at`                      \t| datetime \t| Date time of when the order was closed. Submitted in UTC                                                                                                                                                                                               \t|\n| `order.pickedup_at`                    \t| datetime \t| Date time of when the order was picked up by the guest. Submitted in UTC                                                                                                                                                                               \t|\n| `order.name`                           \t| string   \t| The name of the order, likely entered via the POS or the ordering provider                                                                                                                                                                             \t|\n| `order.provider_id`                    \t| string   \t| The provider by which the order was made through. Examples include toast, grubhub, doordash, etc.                                                                                                                                                      \t|\n| `order.tickets` (required)             \t| array    \t| Represents a single ticket / check in the POS. Includes data like the items, and payments on the ticket. Also includes data bout the customer who paid out the ticket                                                                                  \t|\n| `ticket.source_id` (required)          \t| string   \t| The source ID of the check, per the POS / ordering provider. Must be unique per location_source_id                                                                                                                                                     \t|\n| `ticket.open` (required)               \t| boolean  \t| Represents whether the check is open and hasn't been paid out yet, or if it's closed                                                                                                                                                                   \t|\n| `ticket.guest_count`                   \t| number   \t| Represents how many guests were on the check, if any                                                                                                                                                                                                   \t|\n| `ticket.closed_at`                     \t| datetime \t| When the ticket was closed and paid out in the POS. Submitted in UTC                                                                                                                                                                                   \t|\n| `ticket.name`                          \t| string   \t| The name on the ticket, as entered by the server or integration via the POS                                                                                                                                                                            \t|\n| `ticket.table_id`                      \t| string   \t| The ID of the table that the guest has been sat at, if applicable                                                                                                                                                                                      \t|\n| `ticket.revenue_center_id`             \t| string   \t| The ID of the revenue center that the ticket was created in. Will be specific to the POS, if the POS has the concept of a revenue center                                                                                                               \t|\n| `ticket.employee_id`                   \t| text     \t| The ID from the source_identifier which identifies the employee who serviced the ticket                                                                                                                                                                \t|\n| `ticket.voided` (required)             \t| boolean  \t| Whether or not the ticket was voided and not counted as sales in the POS                                                                                                                                                                               \t|\n| `ticket.ticket_number`                 \t| number   \t| The number displayed on the POS for the specific ticket                                                                                                                                                                                                \t|\n| `ticket.paid` (required)               \t| number   \t| The total amount paid by the guest, in case of partial payments. Value is in cents                                                                                                                                                                     \t|\n| `ticket.tip` (required)                \t| number   \t| The total amount tipped by the guest. Value is in cents.                                                                                                                                                                                               \t|\n| `ticket.tax` (required)                \t| number   \t| The tax amount due on the check. Can vary by state. Value is in cents.                                                                                                                                                                                 \t|\n| `ticket.due` (required)                \t| number   \t| The amount due for the guest to pay when checking out. Value is in cents.                                                                                                                                                                              \t|\n| `ticket.sub_total` (required)          \t| number   \t| The sub total on the check, considering item sales and discounts. Value is in cents                                                                                                                                                                    \t|\n| `ticket.total` (required)              \t| number   \t| The total on the check, considering the sub total and tax. Value is in cents                                                                                                                                                                           \t|\n| `ticket.customer` (required)           \t| object   \t| The customer who is purchasing the items on the ticket                                                                                                                                                                                                 \t|\n| `customer.email` (required)            \t| string   \t| The email of the customer. This is required and is used to uniquely identify a user                                                                                                                                                                    \t|\n| `customer.phone`                       \t| string   \t| The phone number of the customer, expected in the e164 format                                                                                                                                                                                          \t|\n| `customer.fname` (required)            \t| string   \t| The first name of the customer                                                                                                                                                                                                                         \t|\n| `customer.lname`                       \t| string   \t| The last name of the customer                                                                                                                                                                                                                          \t|\n| `customer.email_marketing_opt_in`      \t| boolean  \t| To opt in the customer to Wisely's email marketing.                                                                                                                                                                                                    \t|\n| `customer.sms_marketing_opt_in`        \t| boolean  \t| To opt in the customer to Wisely's SMS marketing.                                                                                                                                                                                                      \t|\n| `ticket.payments` (required)           \t| array    \t| *You must speak with our customer support to ensure that you are eligible to use this.* All payments made on the current ticket. Can be empty if no payments have been made yet                                                                        \t|\n| `payment.source_id` (required)         \t| string   \t| The ID of the payment, based on the integration                                                                                                                                                                                                        \t|\n| `payment.amount` (required)            \t| number   \t| The amount paid by the guest. Value is in cents                                                                                                                                                                                                        \t|\n| `payment.tip` (required)               \t| number   \t| The amount tipped by the guest. Value is in cents                                                                                                                                                                                                      \t|\n| `payment.last4`                        \t| string   \t| The last 4 of the credit card used on that payment. If the payment was made via cash, this field should be `null`                                                                                                                                      \t|\n| `payment.payment_type` (required)      \t| string   \t| The type of payment, must be one of the following values: [`credit_card`, `debit_card`, `ebt_card`, `gift_card`, `google_pay`, `apple_pay`, `cash`]                                                                                                    \t|\n| `payment.card_type`                    \t| string   \t| What type of payment the card is (VISA, MasterCard, etc.)                                                                                                                                                                                              \t|\n| `payment.comments`                     \t| string   \t| Any free field notes made on the payment                                                                                                                                                                                                               \t|\n| `payment.card_token`                   \t| string   \t| If the card token integration is enabled for the provider, this field represents the unique card token for the credit card on this payment. If the payment was cash, this field should be `null`                                                       \t|\n| `ticket.items` (required)              \t| array    \t| All line items on the check that the guest will have to pay for                                                                                                                                                                                        \t|\n| `item.source_id` (required)            \t| string   \t| The ID of the item, based on the integration                                                                                                                                                                                                           \t|\n| `item.name` (required)                 \t| string   \t| The name of the item, as represented by the restaurant's menu                                                                                                                                                                                          \t|\n| `item.comment`                         \t| string   \t| A free text field present if the guest adds special requests onto the item                                                                                                                                                                             \t|\n| `item.price` (required)                \t| number   \t| The total price of the item at the given quantity after discounts have been applied, if any. Value should be in cents                                                                                                                                  \t|\n| `item.quantity` (required)             \t| number   \t| The quantity of items being purchased                                                                                                                                                                                                                  \t|\n| `item.voided` (required)               \t| boolean  \t| Represents whether the item was voided or not                                                                                                                                                                                                          \t|\n| `item.menu_item_id` (required)         \t| string   \t| The ID of the menu item, per the restaurant's menu                                                                                                                                                                                                     \t|\n| `item.modifiers` (required)            \t| array    \t| All modifiers which modify the current item in question. Ex. \"add onions\" on a hamburger. Can be an empty array                                                                                                                                        \t|\n| `modifier.source_id` (required)        \t| string   \t| The ID of the modifier, based on the integration                                                                                                                                                                                                       \t|\n| `modifier.name` (required)             \t| string   \t| The name of the modifier                                                                                                                                                                                                                               \t|\n| `modifier.comment`                     \t| string   \t| A free text field present if the guest adds special requests onto the modifier                                                                                                                                                                         \t|\n| `modifier.price` (required)            \t| number   \t| The total price of the modifier at the given quantity after discounts have been applied, if any. Value should be in cents                                                                                                                              \t|\n| `modifier.quantity` (required)         \t| number   \t| The quantity of modifiers being purchased                                                                                                                                                                                                              \t|\n| `modifier.menu_modifier_id` (required) \t| string   \t| The ID of the modifier, per the restaurant's menu                                                                                                                                                                                                      \t|\n| `modifier.modifiers` (required)        \t| array    \t| A modifier can have modifiers on it. The schema is identical to the `item.modifiers`. Should be an empty array if there are none                                                                                                                       \t|\n\n\n\n\n\n\n\n"
           },
           "response": []
         }
       ],
-      "id": "c6db6568-97a8-42c5-8023-67481c33fb5b",
+      "_postman_id": "c6db6568-97a8-42c5-8023-67481c33fb5b",
       "description": "## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -1073,7 +1085,7 @@
       "item": [
         {
           "name": "Get Guest Profile",
-          "id": "f089872b-f569-476e-acf8-1d4562d7dff5",
+          "_postman_id": "f089872b-f569-476e-acf8-1d4562d7dff5",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1085,7 +1097,7 @@
           "response": []
         }
       ],
-      "id": "8ec9110c-c5fd-4649-a4cf-844a57ea7e69",
+      "_postman_id": "8ec9110c-c5fd-4649-a4cf-844a57ea7e69",
       "description": "The Guest Profile API can be used to query custom attributes, segment memberships, recently tracked events, and other data available on a Wisely Guest Profile. \n\nThe Guest Profiles API can be used to drive one-to-one personalized experiences for your guests across any channel:\n\n## Authorization\n\nThis API will require a OAuth Bearer Token.  Omitting the token will result in a 401 Unauthorized Response.  See [Get Bearer Token](#b39c8f31-e907-4b58-a1d2-49eeaf43b9e2) for details."
     },
     {
@@ -1093,7 +1105,7 @@
       "item": [
         {
           "name": "Update Guest Identity",
-          "id": "2368b262-11fc-403e-86af-036bc563abc4",
+          "_postman_id": "2368b262-11fc-403e-86af-036bc563abc4",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1122,7 +1134,7 @@
         },
         {
           "name": "Track Guest Events",
-          "id": "e103b561-e307-46ba-8f3f-3e6c21962104",
+          "_postman_id": "e103b561-e307-46ba-8f3f-3e6c21962104",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1151,7 +1163,7 @@
         },
         {
           "name": "Batch Events",
-          "id": "bc38b89d-d0b1-48f4-9f77-e19dce4ed889",
+          "_postman_id": "bc38b89d-d0b1-48f4-9f77-e19dce4ed889",
           "protocolProfileBehavior": {
             "disableBodyPruning": true
           },
@@ -1179,18 +1191,18 @@
           "response": []
         }
       ],
-      "id": "1b0bd614-10ad-4a26-829f-0e2f49a6f22a",
+      "_postman_id": "1b0bd614-10ad-4a26-829f-0e2f49a6f22a",
       "description": "Each data source will have a unique **Source Token** that identifies you as a customer as well as the specific source of data.  For example, a loyalty provider, POS data, and raw HTTP requests will each have their own token.  \n\nThis allows us to forward data to specific destinations and intelligently control how identities are merged.  Keeping the tokens separate also allows forwarding historical data from a specific source if you choose to switch destination vendors in the future (eg. switching to a different marketing provider)\n\n## Authorization\n\nThe Data Streams API uses basic authentication.  Omitting the token will result in a 401 Unauthorized Response. \n\nHTTP Basic Authentication involves `username:password`, base64 encoded, and prepended with `Basic`.  \n\nIn practice for this API, you will take a **Source Token**, append a colon, and leave the password empty.  For example, if your token is `abcde12345`, you will base64 encode it to become `YWJjZGUxMjM0NQ==`.  You will then pass this as the authorization header like so: 'Authorization: Basic YWJjMTIzOg=='.\n\n## Webhooks and Third Party Destinations\n\nAll event and identity data captured by the Data Streams API can be forwarded to a destination of your choosing via a POST request to a configurable URL.  This data will be sent formatted exactly how the original request was made.  See [Webhooks](#e268cc48-f30c-41f3-bdb8-4dcf26fc7478) for more details.\n \nWisely also supports direct integrations to various data destinations like loyalty and marketing providers.  This will empower your brand to utilize combined guest data in any platform of your choosing without vendor lock in. Please discuss the integration options with your Wisely CSM.  \n\n## Online Ordering Events\n\nOrdering events must follow a specific syntax to support special behavior in third party destinations.  For example we will hit Iterable's `Track Purchase` endpoint instead of the standard `Track Event` endpoint.\n\n|       Property      \t|  Type  \t|                              Description                              \t|\n|:-------------------:\t|:------:\t|:---------------------------------------------------------------------:\t|\n| id            \t| string \t| Unique order identifier                                               \t|\n| total               \t| number \t| Order total in dollars                                                \t|\n| subtotal            \t| number \t| Order total before taxes and other fees                               \t|\n| items               \t| array  \t| Items in the order                                                    \t|\n| guest               \t| object \t| Basic identifiers for guest                                           \t|\n| guest.name          \t| string \t| Name of guest                                                         \t|\n| guest.phone         \t| string \t| Phone number of guest                                                 \t|\n| guest.user_uuid     \t| string \t| Unique identifier for the guest in your brand                         \t|\n| items[*].item_id    \t| string \t| Unique identifier for the product (should be consistent across orders \t|\n| items[*].name       \t| string \t| Name of the product                                                   \t|\n| items[*].unit_price \t| number \t| Unit price in dollars for the product                                 \t|\n| items[*].quantity   \t| number \t| Quantity of item in the order                                         \t|\n"
     },
     {
       "name": "Webhooks",
       "item": [],
-      "id": "e268cc48-f30c-41f3-bdb8-4dcf26fc7478",
+      "_postman_id": "e268cc48-f30c-41f3-bdb8-4dcf26fc7478",
       "description": "Webhooks allow Wisely to notify a custom application when events happen.  This might include when order data is collected, a guest arrives to pickup their order, or a guest leaves feedback.  Wisely simply forwards the data to your endpoint so you can perform any custom logic you'd wish!\n\nThe configured Webhook Endpoint must return a 200 response as quickly as possible.  Please return a success before performing any complex, time consuming logic on your system.\n\n**Retries**\n\nWisely will attempt to send each event up to 3 times if we receive a 5xx response.  We employ a basic exponential backoff algoritm for retries (eg. 1 second, 4 seconds, 9 seconds)\n\n## Common Fields\n```\n{\n  \"event_id\": \"140fa2df-7a3a-4190-9c5f-cfa2c6c6feef\",\n  \"event_name\": \"Order Guest Arrived\",\n  \"created_at\": \"2021-03-05T13:04:08-07:00\",\n  \"data\": {\n    ...this will include fields specific to the event type\n  }\n}\n``` \n\nOnline Ordering Webhooks contain data as described in [Online Ordering Events](#1b0bd614-10ad-4a26-829f-0e2f49a6f22a)"
     },
     {
       "name": "Get Bearer Token",
-      "id": "b39c8f31-e907-4b58-a1d2-49eeaf43b9e2",
+      "_postman_id": "b39c8f31-e907-4b58-a1d2-49eeaf43b9e2",
       "protocolProfileBehavior": {
         "disableBodyPruning": true
       },
@@ -1224,7 +1236,10 @@
               "value": "****",
               "type": "text"
             }
-          ]
+          ],
+          "options": {
+            "urlencoded": {}
+          }
         },
         "url": "{{baseAuthUrl}}/oauth2/default/v1/token",
         "description": "Using your Wisely provided client ID and client secret, you may fetch a refreshed access token.  Your credentials carry access to your customer data, so be sure to keep them secret! \n**Do not share your client_id or client_secret in publicly accessible areas such as GitHub or client-side code.**\n        \nThe access token is a JWT containing the keys `token_type`, `expires_in`, `access_token`, and `scope`.\n        \nYou will use the `access_token` key prefixed with \"Bearer \" in the `Authorization` header for all requsts. `Authorization: Bearer eyJraWQiOiIx...`\n        \n**Please note `expires_in` indicates that the token is valid for 3600 seconds (1 hour).  Please cache your tokens for this duration before refreshing or you may experience a rate limit."
@@ -1260,7 +1275,10 @@
                   "value": "****",
                   "type": "text"
                 }
-              ]
+              ],
+              "options": {
+                "urlencoded": {}
+              }
             },
             "url": "{{baseAuthUrl}}/oauth2/default/v1/token"
           },
